@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학습심리·사회정서 교사 지원 플랫폼 — 사업계획서</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#ffffff;--surface:#f8fafc;--surface-2:#f1f5f9;--surface-3:#e2e8f0;
+  --border:#e2e8f0;--border-2:#cbd5e1;
+  --text:#0f172a;--text-2:#475569;--text-3:#94a3b8;
+  --accent:#2563eb;--accent-light:#dbeafe;--accent-bg:rgba(37,99,235,0.04);
+  --green:#059669;--green-light:#d1fae5;--green-bg:rgba(5,150,105,0.04);
+  --amber:#d97706;--amber-light:#fef3c7;--amber-bg:rgba(217,119,6,0.04);
+  --red:#dc2626;--red-light:#fee2e2;--red-bg:rgba(220,38,38,0.04);
+  --violet:#7c3aed;--violet-light:#ede9fe;--violet-bg:rgba(124,58,237,0.04);
+}
+html,body{width:100%;height:100%;font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);overflow:hidden;-webkit-font-smoothing:antialiased;}
+.deck{width:100%;height:100%;position:relative;}
+.slide{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:48px 64px 64px;opacity:0;pointer-events:none;transition:opacity 0.5s cubic-bezier(.4,0,.2,1),transform 0.5s cubic-bezier(.4,0,.2,1);transform:translateY(16px);overflow-y:auto;overflow-x:hidden;}
+.slide.active{opacity:1;transform:translateY(0);pointer-events:auto;}
+.slide.active .a{animation:rise 0.6s cubic-bezier(.16,1,.3,1) forwards;}
+.a{opacity:0;transform:translateY(20px);}
+@keyframes rise{to{opacity:1;transform:translateY(0);}}
+.d1{animation-delay:0.05s!important;}.d2{animation-delay:0.1s!important;}.d3{animation-delay:0.15s!important;}.d4{animation-delay:0.2s!important;}.d5{animation-delay:0.25s!important;}
+.sec{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;}
+h2{font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.32;margin-bottom:12px;letter-spacing:-0.5px;}
+h2 em{font-style:normal;color:var(--accent);}
+.sub{font-size:clamp(15px,1.5vw,18px);color:var(--text-2);line-height:1.8;max-width:720px;}
+.sub strong{color:var(--text);font-weight:600;}
+.tag{display:inline-flex;align-items:center;gap:4px;padding:6px 16px;border-radius:100px;font-size:14px;font-weight:600;border:1px solid var(--border);}
+.tag-acc{color:var(--accent);border-color:rgba(37,99,235,0.2);background:var(--accent-bg);}
+.tag-grn{color:var(--green);border-color:rgba(5,150,105,0.2);background:var(--green-bg);}
+.tag-amb{color:var(--amber);border-color:rgba(217,119,6,0.2);background:var(--amber-bg);}
+.tag-vio{color:var(--violet);border-color:rgba(124,58,237,0.2);background:var(--violet-bg);}
+.tag-red{color:var(--red);border-color:rgba(220,38,38,0.2);background:var(--red-bg);}
+.grid{display:grid;gap:16px;margin-top:20px;}.g2{grid-template-columns:1fr 1fr;}.g3{grid-template-columns:1fr 1fr 1fr;}.g4{grid-template-columns:1fr 1fr 1fr 1fr;}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;flex-direction:column;transition:border-color 0.3s,box-shadow 0.3s;}
+.card:hover{border-color:var(--border-2);box-shadow:0 4px 20px rgba(0,0,0,0.04);}
+.card h3{font-size:17px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.card p{font-size:15px;color:var(--text-2);line-height:1.75;}
+.qt{padding:16px 20px;background:var(--surface);border-left:2px solid var(--accent);border-radius:0 12px 12px 0;font-size:14px;color:var(--text-2);line-height:1.7;margin-top:12px;}
+.qt strong{color:var(--text);}.qt .src{font-size:12px;color:var(--text-3);margin-top:6px;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+thead th{background:var(--surface);padding:12px 16px;text-align:left;font-weight:600;color:var(--text-2);border-bottom:1px solid var(--border);font-size:13px;}
+tbody td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-2);}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:var(--surface);}
+.ck{color:var(--green);font-weight:700;}.cx{color:var(--text-3);}
+.flow{display:flex;gap:3px;margin-top:12px;}
+.fs{flex:1;background:var(--surface);border:1px solid var(--border);padding:14px 10px;text-align:center;min-width:0;position:relative;transition:border-color 0.2s;}
+.fs:first-child{border-radius:14px 0 0 14px;}.fs:last-child{border-radius:0 14px 14px 0;}
+.fs:hover{border-color:var(--border-2);}
+.fs .sn{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-3);letter-spacing:1.5px;margin-bottom:3px;}
+.fs .st{font-size:15px;font-weight:700;margin-bottom:2px;}.fs .sd{font-size:12px;color:var(--text-3);line-height:1.5;}
+.fs .arrow{position:absolute;right:-7px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:12px;z-index:2;}
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px;}
+.tli{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;position:relative;transition:border-color 0.2s;}
+.tli:hover{border-color:var(--border-2);}
+.tli:not(:last-child)::after{content:'→';position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--text-3);font-size:12px;z-index:2;}
+.tl-badge{display:inline-block;padding:3px 10px;background:var(--accent-light);color:var(--accent);font-family:'DM Mono',monospace;font-size:13px;font-weight:500;border-radius:6px;margin-bottom:6px;}
+.tl-t{font-size:15px;font-weight:700;margin-bottom:3px;line-height:1.4;}
+.tl-d{font-size:13px;color:var(--text-3);line-height:1.5;}
+.tl-d .ti{display:flex;align-items:baseline;gap:5px;padding:2px 0;}
+.tl-d .ti::before{content:'';min-width:4px;height:4px;border-radius:50%;background:var(--accent);margin-top:5px;flex-shrink:0;}
+.stat-row{display:flex;gap:16px;margin-top:20px;}
+.stat-box{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;}
+.stat-num{font-size:32px;font-weight:900;color:var(--accent);font-family:'DM Mono',monospace;}
+.stat-label{font-size:13px;color:var(--text-3);margin-top:4px;}
+.new-badge{display:inline-block;padding:2px 8px;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:700;border-radius:4px;letter-spacing:1px;margin-left:6px;vertical-align:middle;}
+.nav{position:fixed;bottom:0;left:0;right:0;height:48px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:100;}
+.dots{display:flex;gap:4px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--surface-3);cursor:pointer;transition:all 0.3s;}
+.dot.active{background:var(--accent);width:20px;border-radius:3px;}
+.nbtn{background:var(--surface);border:1px solid var(--border);color:var(--text-2);padding:8px 18px;border-radius:8px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;transition:all 0.2s;}
+.nbtn:hover{border-color:var(--accent);color:var(--accent);}.nbtn:disabled{opacity:0.2;cursor:not-allowed;}
+.pc{font-family:'DM Mono',monospace;font-size:13px;color:var(--text-3);}
+.pbar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 0.5s cubic-bezier(.4,0,.2,1);z-index:101;}
+.slide::-webkit-scrollbar{width:3px;}.slide::-webkit-scrollbar-track{background:transparent;}.slide::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:2px;}
+.mapping-row{display:grid;grid-template-columns:180px 1fr 100px;gap:0;border-bottom:1px solid var(--border);font-size:13px;}
+.mapping-row:last-child{border-bottom:none;}
+.mapping-row>div{padding:10px 14px;}
+.mapping-row .sel-col{font-weight:600;background:var(--surface);border-right:1px solid var(--border);}
+.mapping-row .meta-col{color:var(--text-2);line-height:1.5;}
+.mapping-row .match-col{text-align:center;border-left:1px solid var(--border);font-weight:700;display:flex;align-items:center;justify-content:center;}
+@media(max-width:900px){.slide{padding:28px 20px 60px;}.g2,.g3,.g4{grid-template-columns:1fr;}.flow{flex-wrap:wrap;}.fs{flex:none;width:calc(50% - 2px);}.stat-row{flex-wrap:wrap;}.tl{grid-template-columns:1fr 1fr;}}
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:200;align-items:center;justify-content:center;flex-direction:column;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-header{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1400px;margin-bottom:12px;}
+.modal-title{color:#fff;font-size:15px;font-weight:700;}
+.modal-close{background:none;border:none;color:rgba(255,255,255,0.7);font-size:28px;cursor:pointer;padding:4px 12px;}
+.modal-close:hover{color:#fff;}
+.modal-img-wrap{max-width:1400px;width:100%;flex:1;display:flex;align-items:center;justify-content:center;min-height:0;}
+.modal-img-wrap img{max-width:100%;max-height:85vh;object-fit:contain;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.4);}
+.modal-nav{display:flex;align-items:center;gap:16px;margin-top:12px;}
+.modal-nav button{background:rgba(255,255,255,0.15);border:none;color:#fff;padding:8px 20px;border-radius:8px;font-size:13px;font-family:inherit;cursor:pointer;transition:background 0.2s;}
+.modal-nav button:hover{background:rgba(255,255,255,0.3);}
+.modal-nav button:disabled{opacity:0.3;cursor:not-allowed;}
+.modal-counter{color:rgba(255,255,255,0.6);font-size:13px;font-family:'DM Mono',monospace;}
+
+/* ── WBS Roadmap (scoped) ── */
+.wbs{display:grid;grid-template-columns:160px 40px repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:12px;}
+.wbs .wbs-th{padding:10px 8px;font-family:'DM Mono',monospace;font-size:13px;font-weight:600;text-align:center;background:var(--text);color:#fff;border-right:1px solid rgba(255,255,255,0.1);letter-spacing:0.5px;}
+.wbs .wbs-th:last-child{border-right:none;}
+.wbs .wbs-th.label-col{text-align:left;padding-left:14px;font-family:var(--sans);font-weight:700;font-size:14px;}
+.wbs .wbs-th.cat-col{font-size:9px;letter-spacing:1px;}
+.wbs .row-group{display:contents;}
+.wbs .area-label{grid-column:1;padding:6px 10px;font-weight:700;font-size:11px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border);border-right:1px solid var(--border);background:var(--surface);}
+.wbs .cat-label{grid-column:2;padding:4px 3px;font-size:9px;font-weight:600;color:var(--text-3);writing-mode:vertical-rl;text-orientation:mixed;text-align:center;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);border-right:1px solid var(--border);background:#fff;letter-spacing:1px;}
+.wbs .task-row{display:contents;}
+.wbs .task-cell{padding:0;border-bottom:1px solid var(--border);border-right:1px solid var(--border);position:relative;min-height:24px;}
+.wbs .task-cell:last-child{border-right:none;}
+.wbs .wbs-bar{position:absolute;top:3px;bottom:3px;left:4px;right:4px;border-radius:4px;display:flex;align-items:center;padding:0 6px;font-size:10px;font-weight:500;color:var(--text);line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.wbs .wbs-bar.feat{background:var(--accent-light);border-left:3px solid var(--accent);}
+.wbs .wbs-bar.content{background:var(--green-light);border-left:3px solid var(--green);}
+.wbs .wbs-bar.ai{background:var(--violet-light);border-left:3px solid var(--violet);}
+.wbs .wbs-bar.etc{background:var(--surface);border-left:3px solid var(--border-2,#cbd5e1);}
+.wbs .wbs-bar.sel{background:var(--amber-light);border-left:3px solid var(--amber);}
+.wbs .wbs-bar.launch{background:var(--red-light);border-left:3px solid var(--red);}
+.wbs .span-1{grid-column:span 1;}.wbs .span-2{grid-column:span 2;}.wbs .span-3{grid-column:span 3;}.wbs .span-4{grid-column:span 4;}.wbs .span-5{grid-column:span 5;}
+.wbs .goal-label{grid-column:1/3;padding:8px 10px;font-size:10px;font-weight:800;color:var(--text);background:var(--surface);border-bottom:2px solid var(--border);border-right:1px solid var(--border);display:flex;align-items:center;gap:6px;letter-spacing:0.5px;}
+.wbs .goal-cell{padding:4px 6px;border-bottom:2px solid var(--border);border-right:1px solid var(--border);background:var(--surface);display:flex;align-items:center;}
+.wbs .goal-cell:last-child{border-right:none;}
+.wbs .goal-bar{width:100%;padding:5px 8px;border-radius:6px;background:var(--text);color:#fff;font-size:10px;font-weight:700;text-align:center;line-height:1.35;letter-spacing:-0.2px;}
+.wbs .goal-bar .goal-quote{display:block;font-size:11px;font-weight:900;letter-spacing:-0.3px;}
+.wbs .goal-bar .goal-desc{display:block;font-size:8px;font-weight:400;color:rgba(255,255,255,0.65);margin-top:1px;}
+.wbs .sep{grid-column:1/-1;height:2px;background:var(--border);}
+.wbs-legend{margin-top:10px;display:flex;gap:16px;align-items:center;font-size:10px;color:var(--text-3);}
+.wbs-legend .legend-item{display:flex;align-items:center;gap:4px;}
+.wbs-legend .legend-dot{width:9px;height:9px;border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="pbar" id="pbar"></div>
+<div class="deck" id="deck">
+
+<!-- S0: COVER -->
+<div class="slide active" data-i="0">
+  <div style="max-width:880px;">
+    <div class="a" style="margin-bottom:20px;"><span class="tag tag-acc" style="font-size:13px;">에듀테크플랫폼기획 Core · 2026.03</span></div>
+    <h2 class="a d1" style="font-size:clamp(30px,4.5vw,50px);line-height:1.15;letter-spacing:-1px;">학습심리 검사를 넘어,<br><em>사회정서교육(SEL)</em>까지<br>교사의 실행을 설계하다</h2>
+    <p class="sub a d2" style="margin:20px 0 28px;">학습심리·사회정서 데이터 기반으로 학생 이해와 교육적 개입을 지원하는<br><strong>교사 지원 플랫폼 사업계획서</strong></p>
+    <div class="a d3" style="display:flex;gap:8px;flex-wrap:wrap;">
+      <span class="tag tag-acc">🔬 학습심리 38요인 진단</span>
+      <span class="tag tag-grn">🧠 SEL 수업 지원</span>
+      <span class="tag tag-vio">🤖 AI 의사결정 보조</span>
+      <span class="tag tag-amb">📚 자료실 · 커뮤니티</span>
+    </div>
+  </div>
+</div>
+
+<!-- 목차 -->
+<div class="slide" data-i="1">
+  <div class="sec a">Contents</div>
+  <h2 class="a d1" style="margin-bottom:28px;">목차</h2>
+
+  <div class="a d2" style="display:flex;gap:16px;justify-content:flex-start;">
+    <!-- 1. 내부 분석 -->
+    <div style="flex:1;max-width:300px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;border-top:3px solid var(--accent);text-align:left;">
+      <div style="font-size:12px;font-weight:800;color:var(--accent);margin-bottom:8px;">PART 1</div>
+      <div style="font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;">내부 분석</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-2);">
+        <div><span style="color:var(--text-3);margin-right:8px;">01</span>검증된 수요</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">02</span>현장의 목소리</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">03</span>문제 정의</div>
+      </div>
+    </div>
+
+    <!-- 2. 외부 분석 -->
+    <div style="flex:1;max-width:300px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;border-top:3px solid var(--green);text-align:left;">
+      <div style="font-size:12px;font-weight:800;color:var(--green);margin-bottom:8px;">PART 2</div>
+      <div style="font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;">외부 분석</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-2);">
+        <div><span style="color:var(--text-3);margin-right:8px;">04</span>SEL 정책 기회</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">05</span>SEL 시장 분석</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">06</span>SEL 프레임워크 분석</div>
+      </div>
+    </div>
+
+    <!-- 3. 서비스 개요 -->
+    <div style="flex:1;max-width:300px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;border-top:3px solid var(--amber);text-align:left;">
+      <div style="font-size:12px;font-weight:800;color:var(--amber);margin-bottom:8px;">PART 3</div>
+      <div style="font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;">서비스 개요</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-2);">
+        <div><span style="color:var(--text-3);margin-right:8px;">07</span>서비스 방향</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">08</span>서비스 구조</div>
+      </div>
+    </div>
+
+    <!-- 4. 주요 기능 -->
+    <div style="flex:1;max-width:300px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;border-top:3px solid var(--violet);text-align:left;">
+      <div style="font-size:12px;font-weight:800;color:var(--violet);margin-bottom:8px;">PART 4</div>
+      <div style="font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;">주요 기능</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-2);">
+        <div><span style="color:var(--text-3);margin-right:8px;">09</span>검사 시즌 기능</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">10</span>일상 기능</div>
+      </div>
+    </div>
+
+    <!-- 5. 추진 전략 -->
+    <div style="flex:1;max-width:300px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;border-top:3px solid var(--red);text-align:left;">
+      <div style="font-size:12px;font-weight:800;color:var(--red);margin-bottom:8px;">PART 5</div>
+      <div style="font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;">추진 전략</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--text-2);">
+        <div><span style="color:var(--text-3);margin-right:8px;">11</span>전략 & 전술</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">12</span>로드맵</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">13</span>비즈니스 모델</div>
+        <div><span style="color:var(--text-3);margin-right:8px;">14</span>기대 효과</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S1: 가치 인식 -->
+<div class="slide" data-i="2">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 1 내부 분석 › </span>01 검증된 수요</div>
+  <h2 class="a d1">학습심리정서검사의 가치는<br>이미 <em>교사들이 알고 있다</em></h2>
+  <p class="sub a d2">교사 설문에서 다수가 검사 결과를 <strong>상담 근거 · 생기부 기재</strong>에 활용하고 싶다고 응답</p>
+  <div class="a d3" style="margin-top:20px;display:flex;flex-direction:column;gap:12px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+      <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text-2);line-height:1.7;">
+        "생활기록부 기재 및 학부모 상담에 <strong style="color:var(--text);">전문적인 검사 결과를 곁들일 수 있어</strong> 뿌듯하네요."
+      </div>
+      <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text-2);line-height:1.7;">
+        "분석 내용도 신뢰감 있어 <strong style="color:var(--text);">학부모 상담 시 학생의 특성을 설명하는 데 큰 도움</strong>이 되었습니다."
+      </div>
+      <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text-2);line-height:1.7;">
+        "<strong style="color:var(--text);">교사에게도 객관적 데이터로</strong> 내실있는 상담자료가 주어져 좋습니다."
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+      <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text-2);line-height:1.7;">
+        "검사결과는 교사의 예상대로 나왔습니다. 학부모 상담 기초 자료로 <strong style="color:var(--text);">활용하기에 좋을 것 같습니다.</strong>"
+      </div>
+      <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text-2);line-height:1.7;">
+        "성적만족도가 낮은 학생들 위주로 <strong style="color:var(--text);">학습 관련 상담을 먼저 시작해보겠습니다!</strong>"
+      </div>
+      <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;font-size:14px;color:var(--text-2);line-height:1.7;">
+        "학생 개개인의 마음과 강점, 관계 능력까지 체계적으로 파악할 수 있는 도구여서, 단순 성적 데이터가 아닌 <strong style="color:var(--text);">진정한 의미의 학생 내부 성장 지원에 큰 도움</strong>이 되었습니다."
+      </div>
+    </div>
+  </div>
+  <div class="a d4" style="margin-top:16px;padding:14px 20px;background:var(--amber-bg);border:1px solid rgba(217,119,6,0.12);border-radius:12px;font-size:15px;color:var(--amber);font-weight:600;text-align:center;">
+    ⚠️ "활용하고 싶다", "활용할 예정이다" — 의향은 있지만, PDF로는 행동까지 이어지기 어렵다
+  </div>
+  <div class="a d5" style="margin-top:10px;font-size:11px;color:var(--text-3);text-align:right;">출처 : 비바클래스 설문조사</div>
+</div>
+
+<!-- S2: 현장의 목소리 — 수작업 해결 -->
+<div class="slide" data-i="3">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 1 내부 분석 › </span>02 현장의 목소리</div>
+  <h2 class="a d1">일부 교사는 이미 스스로<br><em>해결책을 만들고</em> 있습니다</h2>
+  <p class="sub a d2">소수의 적극적인 교사는, 서비스가 해줘야 할 일을 <strong>수작업으로 직접 하고 있습니다</strong></p>
+  <div class="grid g3 a d3">
+    <div class="card" style="border-color:rgba(37,99,235,0.2);">
+      <h3 style="color:var(--accent);">📋 직접 활동지를 제작</h3>
+      <p>검사 결과를 활용해 학생의 이해도를 높이고 실제 성찰로 연결하기 위해, 교사가 스스로 활동지를 만들었습니다.</p>
+      <div class="qt">"결과보고서를 주면 학생들이 이해를 포기하는 경우가 많기 때문에, <strong>활동지를 직접 만들어</strong> 장단점을 확인하고 계획을 세우도록 했습니다."<div class="src">— 김태연 선생님 (선도교사단)</div></div>
+    </div>
+    <div class="card" style="border-color:rgba(37,99,235,0.2);">
+      <h3 style="color:var(--accent);">📐 직접 수업을 설계</h3>
+      <p>교과 시간을 활용해 학생들이 스스로 검사 결과를 확인하고 실천 계획을 세우도록, 교사가 수업을 직접 설계했습니다.</p>
+      <div class="qt">"교과 시간을 활용하여 학생들이 <strong>자신의 검사 결과를 스스로 확인하고</strong> 사회정서학습 역량을 기르기 위해 <strong>스스로 실천할 점을 세우도록</strong> 했습니다."<div class="src">— 호민애 선생님 (선도교사단)</div></div>
+    </div>
+    <div class="card" style="border-color:rgba(37,99,235,0.2);">
+      <h3 style="color:var(--accent);">🤖 직접 AI 상담 도우미를 구축</h3>
+      <p>검사 결과를 기반으로 학생 지도 방안을 받기 위해, 교사가 직접 Gemini Gem에 프롬프트와 교사용 보고서를 넣어 AI 상담 도우미를 만들었습니다.</p>
+      <div class="qt">교사용 보고서 PDF를 지식으로 첨부하고, <strong>"학생의 행동 원인을 분석하고 지도 방안을 알려줘"</strong>라고 질문하는 방식으로 활용.<div class="src">— 선도교사단 교사 활용 사례</div></div>
+    </div>
+  </div>
+  <div class="a d4" style="margin-top:16px;padding:14px 20px;background:var(--accent-light);border-radius:12px;font-size:15px;color:var(--accent);font-weight:500;text-align:center;">
+    💡 소수 교사가 수작업으로 하는 것을 → 모든 교사가 쓸 수 있도록 서비스가 구조화
+  </div>
+</div>
+
+<!-- S2: 문제 정의 (기존 유지) -->
+<div class="slide" data-i="4">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 1 내부 분석 › </span>03 문제 정의</div>
+  <h2 class="a d1">왜 검사는 <em>"도구"</em>에<br>머물 수밖에 없었는가</h2>
+  <p class="sub a d2">현장 교사들이 부딪히는 <strong style="color:var(--red);">4가지 구조적 한계</strong></p>
+  <div class="grid g2 a d3">
+    <div class="card" style="border-left:3px solid var(--red);"><h3><span class="tag tag-red" style="padding:2px 10px;font-size:11px;">①</span> 플랫폼에 종속</h3><p>비바샘·AIDT 등 각 플랫폼의 <strong style="color:var(--text);">부가 기능</strong>으로 흩어져 있어,<br>해당 회원만 사용 가능.<br>독립적 확장이 불가능한 구조.</p></div>
+    <div class="card" style="border-left:3px solid var(--amber);"><h3><span class="tag tag-amb" style="padding:2px 10px;font-size:11px;">②</span> PDF 결과지, 한 번 보고 끝</h3><p>PDF 중심의 정적 결과만 제공되어 <strong style="color:var(--text);">저장·추적 불가</strong>.<br>복잡한 요인 조합 결과를 교사가 해석하기 어렵고,<br>한 번 보고 끝나는 구조.</p></div>
+    <div class="card" style="border-left:3px solid var(--violet);"><h3><span class="tag tag-vio" style="padding:2px 10px;font-size:11px;">③</span> 활용 방법이 없다</h3><p><strong style="color:var(--text);">교사가 알아서 해석</strong>해야 하고,<br>해석해도 "이 학생에게 어떻게?"에 대한 답이 없다.<br>활동지를 직접 만들고, AI 도우미를 직접 구축하는 수작업 반복.</p></div>
+    <div class="card" style="border-left:3px solid var(--green);"><h3><span class="tag tag-grn" style="padding:2px 10px;font-size:11px;">④</span> 교사 간 고립</h3><p>같은 유형의 학생을 지도하면서도<br><strong style="color:var(--text);">서로의 노하우를 모른다</strong>.<br>성공 사례가 공유·축적되지 않는 폐쇄 구조.</p></div>
+  </div>
+  <div class="a d4" style="margin-top:14px;font-size:14px;color:var(--text-3);">→ 종속된 부가기능(①) 한계 안에서, PDF라 한 번 보고 끝(②) → 활용 방법도 없고(③) → 노하우도 공유 안 됨(④)</div>
+</div>
+
+<!-- S4: SEL 정책 기회 -->
+<div class="slide" data-i="5">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 2 외부 분석 › </span>04 SEL 정책 기회</div>
+  <h2 class="a d1">2026, SEL이 <em>학교의 의무</em>가 되다</h2>
+  <p class="sub a d2">교육부가 전담 조직을 신설하고, 2026학년도부터 <strong>전 학년 17차시 이상</strong> 사회정서교육을 의무화</p>
+  <div class="a d3" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+    <div style="display:grid;grid-template-columns:120px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--accent-bg);padding:12px 14px;font-weight:700;font-size:14px;color:var(--accent);display:flex;align-items:center;">2024.01</div>
+      <div style="padding:12px 16px;font-size:14px;color:var(--text-2);">교육부 <strong style="color:var(--text);">'사회정서성장지원과'</strong> 신설 — SEL 전담 조직 최초 구성</div>
+    </div>
+    <div style="display:grid;grid-template-columns:120px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--accent-bg);padding:12px 14px;font-weight:700;font-size:14px;color:var(--accent);display:flex;align-items:center;">2025</div>
+      <div style="padding:12px 16px;font-size:14px;color:var(--text-2);">한국형 사회정서교육 <strong style="color:var(--text);">시범 도입</strong> → 초/중/고 프로그램 개발, 효과 입증</div>
+    </div>
+    <div style="display:grid;grid-template-columns:120px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--accent-bg);padding:12px 14px;font-weight:700;font-size:14px;color:var(--accent);display:flex;align-items:center;">2026.01</div>
+      <div style="padding:12px 16px;font-size:14px;color:var(--text-2);">에듀넷 SEL 전용 서비스(ksee.edunet.net) 개통 + <strong style="color:var(--text);">선도교사 1,500명</strong> 양성 + 콘텐츠 <strong style="color:var(--text);">144종</strong> 보급</div>
+    </div>
+    <div style="display:grid;grid-template-columns:120px 1fr;border:1px solid var(--green);border-radius:12px;overflow:hidden;background:var(--green-bg);">
+      <div style="padding:12px 14px;font-weight:700;font-size:14px;color:var(--green);display:flex;align-items:center;">2026~</div>
+      <div style="padding:12px 16px;font-size:14px;color:var(--text);font-weight:500;"><strong style="color:var(--green);">전 학교 초1~고3</strong> 모든 학년 17차시 이상 SEL 수업 의무 운영</div>
+    </div>
+  </div>
+  <div class="a d4" style="margin-top:14px;padding:16px 20px;background:var(--amber-bg);border:1px solid rgba(217,119,6,0.12);border-radius:12px;">
+    <div style="font-size:14px;color:var(--amber);font-weight:600;">⚠️ 정부는 콘텐츠(숏폼·영상·카드뉴스)만 보급 — "어떤 학생에게 어떤 SEL 활동이 필요한지"를 데이터 기반으로 가이드하는 도구는 없음</div>
+  </div>
+</div>
+
+<!-- S5: SEL 글로벌 시장 -->
+<div class="slide" data-i="6">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 2 외부 분석 › </span>05 SEL 시장 분석</div>
+  <h2 class="a d1">글로벌은 <em>플랫폼 경쟁</em>,<br>국내는 <em>민간 공백</em></h2>
+
+  <div class="grid g2 a d2" style="margin-top:14px;align-items:stretch;">
+    <!-- 글로벌 -->
+    <div style="padding:20px;background:var(--accent-bg);border:2px solid rgba(37,99,235,0.15);border-radius:14px;">
+      <div style="font-size:16px;font-weight:800;color:var(--accent);margin-bottom:12px;">🌍 글로벌 — $4.0B → $12.9B (CAGR 24.3%)</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:1.7;">
+        · <strong style="color:var(--text);">Panorama</strong> · Aperture · Satchel Pulse<br><span style="margin-left:10px;color:var(--accent);font-weight:600;">→ 측정·데이터·지원 플랫폼형</span><br><br>
+        · <strong style="color:var(--text);">EVERFI</strong> · Second Step · Move This World<br><span style="margin-left:10px;color:var(--amber);font-weight:600;">→ 커리큘럼·콘텐츠형</span><br><br>
+        · <strong style="color:var(--text);">7 Mindsets</strong><br><span style="margin-left:10px;color:var(--green);font-weight:600;">→ 티어형 예방·개입 프로그램형</span><br><br>
+      </div>
+      <div style="margin-top:12px;padding:10px 14px;background:rgba(255,255,255,0.6);border-radius:8px;font-size:13px;color:var(--text-2);line-height:1.6;">
+        <strong style="color:var(--text);">시장 진화 방향:</strong> 콘텐츠형 → <strong style="color:var(--accent);">플랫폼형</strong> → 티어형<br>
+        "교실용 프로그램"이 아니라, 측정·대시보드·개입관리까지 묶인 플랫폼 시장으로 진화 중
+      </div>
+    </div>
+
+    <!-- 국내 -->
+    <div style="padding:20px;background:var(--amber-bg);border:2px solid rgba(217,119,6,0.15);border-radius:14px;">
+      <div style="font-size:16px;font-weight:800;color:var(--amber);margin-bottom:12px;">🇰🇷 국내 — 정책은 열렸으나 민간 플레이어는 분산</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:2.2;">
+        <strong style="color:var(--text);">교육부: SEL 정책 추진 및 학교 현장 보급 확대</strong><br>
+        · 에듀넷 : 자료 공유 누리집<br>
+        · Wee클래스 : 전문 상담교사 대상 위기 상담 인프라<br>
+        <strong style="color:var(--text);">민간은 기능별로 분화</strong><br>
+        · 검사: 조이에듀, 심스페이스 — 진단/상태 확인 중심<br>
+        · 콘텐츠: 그라운드, 어썸스쿨 — 학급 활동/실행 콘텐츠 중심<br>
+        · 교육: SELlab, 어썸스쿨 — 연수/프로그램 운영 중심
+      </div>
+      <div style="margin-top:16px;padding:10px 14px;background:rgba(255,255,255,0.6);border-radius:8px;font-size:13px;line-height:1.6;">
+        <strong style="color:var(--red);">민간 플레이어는 존재하나, 검사–해석–콘텐츠–교사 실행을 연결하는 통합 플랫폼은 아직 공백</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S8: SEL × META 2-Layer 커버리지 -->
+<div class="slide" data-i="7">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 2 외부 분석 › </span>06 SEL 프레임워크 분석</div>
+  <h2 class="a d1">SEL × 학습심리정서검사 <em>연결 가능성은 충분하다</em></h2>
+  <p class="sub a d2" style="white-space:nowrap;">글로벌 및 국내 SEL 역량 분석 결과, 기존 학습심리정서검사가 SEL 핵심 역량과 <strong>상당 부분 중첩</strong>되어 진입 기반이 확보되어 있음을 확인</p>
+
+  <!-- ===== CASEL ===== -->
+  <div class="a d2" style="margin-top:8px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+      <div style="font-size:14px;font-weight:900;color:var(--text);">CASEL(글로벌 표준 프레임워크)</div>
+      <div style="font-size:11px;color:var(--text-3);">5대 역량 · 40개 공식 항목</div>
+      <div style="margin-left:auto;display:flex;gap:12px;align-items:center;font-size:11px;">
+        <div style="display:flex;align-items:center;gap:4px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#059669;"></span> 직접 측정
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:rgba(5,150,105,0.2);border:1px solid rgba(5,150,105,0.4);"></span> 간접 지원
+        </div>
+        <div style="display:flex;align-items:center;gap:4px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#e2e8f0;"></span> 콘텐츠만
+        </div>
+        <div style="font-size:12px;font-weight:800;color:var(--accent);">31/40 = 78%</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:3px;">
+
+      <!-- Layer 1 -->
+      <div class="sel-layer" data-layer="1" style="flex:3;display:flex;gap:3px;padding:5px;border:2px solid transparent;border-radius:9px;background:transparent;position:relative;transition:all 0.3s;">
+        <div class="sel-layer-label" style="position:absolute;top:-7px;left:10px;background:#fff;padding:0 5px;font-size:9px;font-weight:800;color:var(--accent);letter-spacing:0.5px;transition:all 0.3s;opacity:0;">LAYER 1 — 검사 → 결과 → AI 지원 → 콘텐츠</div>
+
+        <!-- SA 9개 -->
+        <div style="flex:1;border:1px solid rgba(5,150,105,0.2);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--green);margin-bottom:3px;">Self-Awareness <span style="font-weight:600;color:var(--text-3);">8/9</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(5,150,105,0.15);color:#047857;">정체성 통합</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(5,150,105,0.15);color:#047857;">개인·문화적 자산</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">자기 감정 인식</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">정직·진실성</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">감정·가치·생각 연결</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(5,150,105,0.15);color:#047857;">편견·편향 성찰</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">자기효능감</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">성장 마인드셋</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">관심사·목적의식</div>
+          </div>
+        </div>
+        <!-- SM 7개 -->
+        <div style="flex:0.85;border:1px solid rgba(5,150,105,0.2);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--green);margin-bottom:3px;">Self-Management <span style="font-weight:600;color:var(--text-3);">7/7</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">감정 관리</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">스트레스 관리</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">자기규율·동기</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">목표 설정</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">계획·조직</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">주도적 도전</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(5,150,105,0.15);color:#047857;">개인·집단 주체성</div>
+          </div>
+        </div>
+        <!-- SoA 8개 -->
+        <div style="flex:1;border:1px solid rgba(37,99,235,0.2);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--accent);margin-bottom:3px;">Social Awareness <span style="font-weight:600;color:var(--text-3);">5/8</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#2563eb;color:#fff;">타인 관점 수용</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(37,99,235,0.15);color:#1d4ed8;">타인 강점 인식</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#2563eb;color:#fff;">공감·동정</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#2563eb;color:#fff;">타인 감정 관심</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">감사 표현</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">다양한 사회규범</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(37,99,235,0.15);color:#1d4ed8;">상황적 요구 인식</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">조직·시스템 영향</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div class="sel-layer" data-layer="2" style="flex:2;display:flex;gap:3px;padding:5px;border:2px solid transparent;border-radius:9px;background:transparent;position:relative;transition:all 0.3s;">
+        <div class="sel-layer-label" style="position:absolute;top:-7px;left:10px;background:#fff;padding:0 5px;font-size:9px;font-weight:800;color:var(--amber);letter-spacing:0.5px;transition:all 0.3s;opacity:0;">LAYER 2 — 콘텐츠 자료실</div>
+
+        <!-- RS 9개 -->
+        <div style="flex:1;border:1px solid rgba(217,119,6,0.15);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--amber);margin-bottom:3px;">Relationship <span style="font-weight:600;color:var(--text-3);">8/9</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">효과적 의사소통</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#d97706;color:#fff;">긍정적 관계 형성</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">문화적 역량</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">팀워크·협력</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">갈등 해결</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">압력 저항</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">리더십</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">도움 요청·제공</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">타인 권리 옹호</div>
+          </div>
+        </div>
+        <!-- RDM 7개 -->
+        <div style="flex:0.85;border:1px solid rgba(220,38,38,0.15);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--red);margin-bottom:3px;">Decision-Making <span style="font-weight:600;color:var(--text-3);">3/7</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(220,38,38,0.12);color:#b91c1c;">호기심·개방성</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(220,38,38,0.12);color:#b91c1c;">합리적 판단</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">문제 해결</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(220,38,38,0.12);color:#b91c1c;">결과 예측·평가</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">비판적 사고</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">안녕 증진</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">영향 평가</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 구분선 -->
+  <div class="a d2" style="margin-top:10px;border-top:1px dashed var(--border);padding-top:10px;">
+
+  <!-- ===== K-SEL ===== -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+      <div style="font-size:14px;font-weight:900;color:var(--text);">K-SEL(한국형 학교 기반 사회정서교육 모델)</div>
+      <div style="font-size:11px;color:var(--text-3);">4대 영역 · 6대 핵심역량 · 28개 구성요인</div>
+      <div style="margin-left:auto;font-size:12px;font-weight:800;color:var(--accent);">24/28 = 86%</div>
+    </div>
+    <div style="display:flex;gap:3px;">
+
+      <!-- Layer 1 -->
+      <div class="sel-layer" data-layer="1" style="flex:1;display:flex;gap:3px;padding:5px;border:2px solid transparent;border-radius:9px;background:transparent;position:relative;transition:all 0.3s;">
+        <div class="sel-layer-label" style="position:absolute;top:-7px;left:10px;background:#fff;padding:0 5px;font-size:9px;font-weight:800;color:var(--accent);letter-spacing:0.5px;transition:all 0.3s;opacity:0;">LAYER 1 — 검사 → 결과 → AI 지원 → 콘텐츠</div>
+
+        <!-- 자기 9/9 -->
+        <div style="flex:1.3;border:1px solid rgba(5,150,105,0.2);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--green);margin-bottom:3px;">자기 <span style="font-weight:600;color:var(--text-3);">자기인식+자기관리 · 9/9</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">생각·감정·행동 인식</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">스트레스 인식</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">감정·약점 인식</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">자기효능감</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(5,150,105,0.15);color:#047857;">마음챙김훈련</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">부정적 감정 대처</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">스트레스 조절</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">자기조절력 향상</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#059669;color:#fff;">목표/과제 설정·추진</div>
+          </div>
+        </div>
+        <!-- 관계 6/6 -->
+        <div style="flex:0.9;border:1px solid rgba(37,99,235,0.2);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--accent);margin-bottom:3px;">관계 <span style="font-weight:600;color:var(--text-3);">관계인식+관계관리 · 6/6</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#2563eb;color:#fff;">타인 감정 존중</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#2563eb;color:#fff;">공감하기</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(37,99,235,0.15);color:#1d4ed8;">다양성 수용</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(37,99,235,0.15);color:#1d4ed8;">의사소통 기술</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#2563eb;color:#fff;">대인관계 기술</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(37,99,235,0.15);color:#1d4ed8;">갈등해결</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div class="sel-layer" data-layer="2" style="flex:1;display:flex;gap:3px;padding:5px;border:2px solid transparent;border-radius:9px;background:transparent;position:relative;transition:all 0.3s;">
+        <div class="sel-layer-label" style="position:absolute;top:-7px;left:10px;background:#fff;padding:0 5px;font-size:9px;font-weight:800;color:var(--amber);letter-spacing:0.5px;transition:all 0.3s;opacity:0;">LAYER 2 — 콘텐츠 자료실</div>
+
+        <!-- 공동체 6/8 -->
+        <div style="flex:1;border:1px solid rgba(217,119,6,0.15);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--amber);margin-bottom:3px;">공동체 <span style="font-weight:600;color:var(--text-3);">6/8</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">자기성찰</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">소속감</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">책임감</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">주도성</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">협력하기</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">규칙 준수</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(217,119,6,0.15);color:#b45309;">부당한 압력 대응</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">문제 확인·해결</div>
+          </div>
+        </div>
+        <!-- 마음건강 3/5 -->
+        <div style="flex:0.7;border:1px solid rgba(220,38,38,0.15);border-radius:6px;padding:4px;background:#fff;">
+          <div style="font-size:12px;font-weight:800;color:var(--red);margin-bottom:3px;">마음건강 <span style="font-weight:600;color:var(--text-3);">3/5</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5px;">
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(220,38,38,0.12);color:#b91c1c;">정신건강 이해</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(220,38,38,0.12);color:#b91c1c;">정신 대처</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">낙인 감소</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:#e2e8f0;color:var(--text-3);">자해·자살 예방</div>
+            <div style="padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(220,38,38,0.12);color:#b91c1c;">도움 요청</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 Layer 토글 버튼 -->
+  <div class="a d3" style="margin-top:8px;display:flex;gap:8px;justify-content:center;align-items:center;">
+    <button class="sel-layer-btn active" data-target="all" onclick="toggleSelLayer('all')" style="padding:8px 24px;border-radius:100px;font-size:13px;font-weight:800;cursor:pointer;border:2px solid var(--border);background:var(--text);color:#fff;font-family:var(--sans);transition:all 0.25s;">전체 보기</button>
+    <button class="sel-layer-btn" data-target="1" onclick="toggleSelLayer('1')" style="padding:8px 24px;border-radius:100px;font-size:13px;font-weight:800;cursor:pointer;border:2px solid var(--accent);background:#fff;color:var(--accent);font-family:var(--sans);transition:all 0.25s;">
+      Layer 1 — 풀 파이프라인 &nbsp;<span style="font-weight:600;opacity:0.7;">검사 → 결과 → AI 지원 → 콘텐츠</span>
+    </button>
+    <button class="sel-layer-btn" data-target="2" onclick="toggleSelLayer('2')" style="padding:8px 24px;border-radius:100px;font-size:13px;font-weight:800;cursor:pointer;border:2px solid var(--amber);background:#fff;color:var(--amber);font-family:var(--sans);transition:all 0.25s;">
+      Layer 2 — 콘텐츠 자료실 &nbsp;<span style="font-weight:600;opacity:0.7;">사회정서교육 콘텐츠 제시</span>
+    </button>
+  </div>
+  <div class="a d4" style="margin-top:10px;padding:16px 20px;background:var(--amber-bg);border:1px solid rgba(217,119,6,0.12);border-radius:12px;">
+    <div style="font-size:14px;color:var(--amber);font-weight:600;">💡 38요인 검사를 SEL 관점에서 재해석하면, 별도 검사 도구 없이도 SEL 진단 기반을 확보할 수 있다</div>
+  </div>
+</div>
+
+<!-- S6: 서비스 방향 — 검사를 넘어 SEL까지 -->
+<div class="slide" data-i="8">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 3 서비스 개요 › </span>07 서비스 방향</div>
+  <h2 class="a d1">검사를 넘어,<br><em>SEL까지</em></h2>
+  <p class="sub a d2">검사 도구의 구조적 한계를 먼저 해결하고, 그 위에 SEL 교육 실행까지 확장합니다.</p>
+
+  <div class="a d3" style="margin-top:20px;display:grid;grid-template-columns:1fr 40px 1fr;gap:0;align-items:start;">
+
+    <!-- STEP 1 -->
+    <div style="padding:24px;background:var(--accent-bg);border:2px solid rgba(37,99,235,0.15);border-radius:16px;">
+      <div style="font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--accent);letter-spacing:2px;margin-bottom:8px;">STEP 1</div>
+      <div style="font-size:18px;font-weight:900;color:var(--accent);margin-bottom:14px;">검사 도구의 한계를 극복한다</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;"><span style="color:var(--red);font-size:11px;">✕</span><span style="color:var(--text-3);">PDF 결과지</span><span style="color:var(--accent);font-weight:700;">→</span><strong style="color:var(--text);">인터랙티브 대시보드</strong></div>
+        </div>
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;"><span style="color:var(--red);font-size:11px;">✕</span><span style="color:var(--text-3);">교사가 혼자 해석</span><span style="color:var(--accent);font-weight:700;">→</span><strong style="color:var(--text);">AI 자동 해석 + 유형 분류</strong></div>
+        </div>
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;"><span style="color:var(--red);font-size:11px;">✕</span><span style="color:var(--text-3);">활용법 없음</span><span style="color:var(--accent);font-weight:700;">→</span><strong style="color:var(--text);">HOW 가이드 + AI 어시스턴트</strong></div>
+        </div>
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;"><span style="color:var(--red);font-size:11px;">✕</span><span style="color:var(--text-3);">한 번 보고 끝</span><span style="color:var(--accent);font-weight:700;">→</span><strong style="color:var(--text);">시계열 추적 + 변화 비교</strong></div>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:12px;color:var(--accent);font-weight:600;">= 검사를 "쓸 수 있는 서비스"로</div>
+    </div>
+
+    <!-- 화살표 -->
+    <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:24px;color:var(--accent);font-weight:700;">→</div>
+
+    <!-- STEP 2 -->
+    <div style="padding:24px;background:var(--green-bg);border:2px solid rgba(5,150,105,0.15);border-radius:16px;">
+      <div style="font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--green);letter-spacing:2px;margin-bottom:8px;">STEP 2</div>
+      <div style="font-size:18px;font-weight:900;color:var(--green);margin-bottom:14px;">SEL 교육의 실행까지 확장한다</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="font-weight:700;color:var(--text);margin-bottom:2px;">38요인 검사 = SEL 진단 기반</div>
+          <div style="color:var(--text-2);font-size:12px;">자기인식·자기관리 영역을 이미 측정 중</div>
+        </div>
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="font-weight:700;color:var(--text);margin-bottom:2px;">데이터 기반 SEL 수업 추천</div>
+          <div style="color:var(--text-2);font-size:12px;">개별 반 및 학생별 SEL 활동이 필요한지 연결</div>
+        </div>
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="font-weight:700;color:var(--text);margin-bottom:2px;">SEL 자료실 + 교사 커뮤니티</div>
+          <div style="color:var(--text-2);font-size:12px;">비바샘 콘텐츠 연계 + 사례 축적</div>
+        </div>
+        <div style="padding:10px 14px;background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;">
+          <div style="font-weight:700;color:var(--text);margin-bottom:2px;">SEL 개입 효과 추적</div>
+          <div style="color:var(--text-2);font-size:12px;">17차시 의무화 대응 + 교육청 보고 데이터</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:12px;color:var(--green);font-weight:600;">= 학습심리 + SEL을 잇는 "교사 지원 플랫폼"으로</div>
+    </div>
+  </div>
+</div>
+
+<!-- S10: 서비스 구조 (기존 + SEL 자료실 확장) -->
+<div class="slide" data-i="9">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 3 서비스 개요 › </span>08 서비스 구조</div>
+  <h2 class="a d1">검사는 <em>입구</em>, 자료실·상담은 <em>일상</em></h2>
+  <p class="sub a d2"><strong style="color:var(--accent);">검사 시즌</strong>에 데이터를 모으고, <strong style="color:var(--green);">일상</strong>에는 자료실(SEL 포함) + 상담 + 커뮤니티로 매일 방문</p>
+  <div class="a d3" style="margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+    <div style="display:grid;grid-template-columns:220px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--accent-bg);border-right:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:6px;font-size:15px;font-weight:700;"><span style="color:var(--accent);">🔬</span> 학습심리정서검사</div>
+      <div style="padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">검사 생성/배포</div><div style="font-size:12px;color:var(--text-3);">QR 기반 · 비회원 응시</div></div>
+        <div style="color:var(--text-3);font-size:11px;">→</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">대시보드</div><div style="font-size:12px;color:var(--text-3);">반별→학급→개별 · HOW 가이드</div></div>
+
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:220px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--green-bg);border-right:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:6px;font-size:15px;font-weight:700;"><span style="color:var(--green);">💬</span> 상담 관리</div>
+      <div style="padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">상담 일정 · 기록</div><div style="font-size:12px;color:var(--text-3);">캘린더 · 관찰 메모 · 음성→텍스트</div></div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">상담 대시보드</div><div style="font-size:12px;color:var(--text-3);">빈도 추이 · SEL 역량 태그</div></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:220px 1fr;border:1px solid rgba(217,119,6,0.3);border-radius:12px;overflow:hidden;background:var(--amber-bg);">
+      <div style="border-right:1px solid rgba(217,119,6,0.2);padding:14px 16px;display:flex;align-items:center;gap:6px;font-size:15px;font-weight:700;"><span style="color:var(--amber);">📚</span> 교육 자료실 <span class="new-badge" style="background:var(--amber-light);color:var(--amber);">SEL</span></div>
+      <div style="padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <div style="background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">학습심리 자료</div><div style="font-size:12px;color:var(--text-3);">유형별 활동지 · 코칭 가이드</div></div>
+        <div style="background:rgba(255,255,255,0.7);border:1px solid rgba(37,99,235,0.3);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;color:var(--accent);">SEL 수업 자료</div><div style="font-size:12px;color:var(--accent);">SEL 태그 분류 · 차시 운영 가이드 · 비바샘 연계</div></div>
+        <div style="background:rgba(255,255,255,0.7);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">상담 · 템플릿</div><div style="font-size:12px;color:var(--text-3);">준비 시트 · 면담 시트</div></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:220px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--violet-bg);border-right:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:6px;font-size:15px;font-weight:700;"><span style="color:var(--violet);">👥</span> 교사 커뮤니티</div>
+      <div style="padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">사례 공유 · SEL 수업 후기</div><div style="font-size:12px;color:var(--text-3);">유형별/역량별 태그 · 자료실 연동</div></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:220px 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+      <div style="background:var(--violet-bg);border-right:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:6px;font-size:15px;font-weight:700;"><span style="color:var(--violet);">🤖</span> AI 어시스턴트</div>
+      <div style="padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 12px;"><div style="font-size:14px;font-weight:600;">학습심리 + SEL 맥락 질의</div><div style="font-size:12px;color:var(--text-3);">학생/반 선택 · 맞춤 답변 · 전용 메뉴 + 플로팅</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S9: 검사 시즌 기능 -->
+<div class="slide" data-i="10">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 4 주요 기능 › </span>09 검사 시즌 기능</div>
+  <h2 class="a d1">진단부터 개입까지<br>검사 결과의 <em>가치를 극대화</em></h2>
+  <div class="grid g2 a d2">
+    <div class="card" style="cursor:pointer;" onclick="openGallery('service')"><h3>🔗 독립형 서비스 <span style="margin-left:auto;padding:2px 8px;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:700;border-radius:4px;">📷 미리보기</span></h3><p>· 비바샘·AIDT 종속에서 벗어난 개방형 서비스.<br>· QR 기반 간편 응시.<br>· 기존 검사 결과 PDF 업로드 시 동일 분석.</p></div>
+    <div class="card" style="cursor:pointer;" onclick="openGallery('dashboard')"><h3>📊 인터랙티브 대시보드 <span style="margin-left:auto;padding:2px 8px;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:700;border-radius:4px;">📷 미리보기</span></h3><p>· 반별 비교 → 학급 분석 → 학생 개별 분석의 3단계 흐름.<br>· AI 요약 + 시각화.<br>· 관찰 메모 · 상담 이력 사이드바.</p></div>
+    <div class="card" style="cursor:pointer;" onclick="openGallery('howguide')"><h3>📋 HOW 가이드 <span style="margin-left:auto;padding:2px 8px;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:700;border-radius:4px;">📷 미리보기</span></h3><p>· "그래서 뭘 해야 하지?"에 대한 답.<br>· 교사용 지도 포인트, 학생용 행동 가이드, 반 단위 운영 전략.</p></div>
+    <div class="card" style="cursor:pointer;" onclick="openGallery('ai')"><h3>🤖 AI 어시스턴트 <span style="margin-left:auto;padding:2px 8px;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:700;border-radius:4px;">📷 미리보기</span></h3><p>· 검사 결과 자동 해석 — 교사가 이해하기 쉽게 총평 제공<br>· 맞춤 질의응답 — 검사 결과 기반 맥락에 맞추어 즉답<br>· 상담/생기부 초안 생성 — 학생별 데이터 기반 문구 제안</p></div>
+  </div>
+</div>
+
+<!-- S7: 일상 기능 -->
+<div class="slide" data-i="11">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 4 주요 기능 › </span>10 일상 기능</div>
+  <h2 class="a d1">검사 없이도<br>교사가 <em>오는 이유</em></h2>
+  <div class="grid g3 a d2" style="margin-top:20px;">
+    <div class="card" style="border-top:3px solid var(--green);padding:28px 24px;">
+      <h3 style="color:var(--green);font-size:18px;">💬 상담 관리</h3>
+      <p style="margin-top:8px;padding-bottom:8px;">
+        · 상담 일정 캘린더 (전체 학생 뷰)<br>
+        · 상담 기록 자동화<br>
+        · 학생/학부모 상담 준비 시트<br>
+        · 관찰 메모 (30초 기록)<br>
+        · 생기부 문구 생성 보조
+      </p>
+      <div style="margin-top:auto;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--text-3);">
+        <span style="color:var(--green);font-weight:600;">고도화 :</span> 음성 파일 업로드 · 상담 기록 텍스트 분석
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--amber);padding:28px 24px;">
+      <h3 style="color:var(--amber);font-size:18px;">📚 교육 자료실</h3>
+      <p style="margin-top:8px;padding-bottom:8px;">
+        · 유형별 학생 성찰 활동지<br>
+        · 유형별 지도 전략 가이드<br>
+        · 상담 준비 템플릿<br>
+        · 사회정서교육 수업 자료<br>
+        · 비바샘 기존 콘텐츠 연계
+      </p>
+      <div style="margin-top:auto;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--amber);font-weight:500;">
+        → 검사를 안 쓰는 교사도 자료실만으로 방문 이유 생성
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--violet);padding:28px 24px;">
+      <h3 style="color:var(--violet);font-size:18px;">👥 교사 커뮤니티</h3>
+      <p style="margin-top:8px;padding-bottom:8px;">
+        · "이렇게 했더니 효과 있었다" 사례 공유<br>
+        · 유형별/상황별 지도 노하우 축적<br>
+        · 자료실 활동지 활용 후기 & 토론<br>
+        · 자료실 ↔ 커뮤니티 상호 연결
+      </p>
+      <div style="margin-top:auto;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--violet);font-weight:500;">
+        → 선도교사단이 초기 콘텐츠 씨앗 역할
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S11: 전략과 전술 -->
+<div class="slide" data-i="12">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 5 추진 전략 › </span>11 전략 & 전술</div>
+  <h2 class="a d1">SEL의 빈자리를<br><em>우리가 채우는 방법</em></h2>
+
+  <div class="grid g2 a d2" style="margin-top:14px;">
+
+    <!-- 전략 -->
+    <div style="padding:20px;background:var(--text);border:2px solid var(--text);border-radius:16px;">
+      <div style="font-size:17px;font-weight:900;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:28px;background:#fff;color:var(--text);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;">🎯</div>
+        선점 포지션 (전략)
+      </div>
+      <div style="font-size:22px;font-weight:900;color:#fff;line-height:1.5;margin-bottom:14px;">
+        SEL의 조각은 모두 있다.<br><em style="font-style:normal;">연결하는 서비스</em>만 없다.<br>그 자리를 선점한다.
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.15);border-radius:10px;border-left:4px solid var(--accent);">
+          <div style="font-size:22px;">📊</div>
+          <div><strong style="color:#fff;font-size:15px;">데이터 기반 SEL</strong><br><span style="color:rgba(255,255,255,0.7);font-size:13px;">"누구에게 무엇이 필요한지" 추천</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.15);border-radius:10px;border-left:4px solid var(--green);">
+          <div style="font-size:22px;">🤝</div>
+          <div><strong style="color:#fff;font-size:15px;">Wee클래스와 보완</strong><br><span style="color:rgba(255,255,255,0.7);font-size:13px;">전문상담교사 보다는 담임·교과교사 영역에 집중</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.15);border-radius:10px;border-left:4px solid var(--amber);">
+          <div style="font-size:22px;">🚀</div>
+          <div><strong style="color:#fff;font-size:15px;">진단부터 실행까지, SEL 전 과정을 연결하는 플랫폼</strong><br><span style="color:rgba(255,255,255,0.7);font-size:13px;">기능별 분절된 민간 시장 내 포지셔닝</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 전술 -->
+    <div style="padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:16px;">
+      <div style="font-size:17px;font-weight:900;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:28px;background:var(--text);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;">🔧</div>
+        실행 방법 (전술)
+      </div>
+
+      <!-- Layer 1 -->
+      <div style="padding:14px;background:var(--accent-bg);border:1px solid rgba(37,99,235,0.12);border-radius:12px;margin-bottom:8px;">
+        <div style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:6px;">Layer 1 — 진단·대시보드·AI 어시스턴트 (검사 도구에서 서비스로)</div>
+        <div style="font-size:13px;color:var(--text-2);line-height:1.65;">
+          · 38요인 검사로 [자기]+[관계] 영역 데이터 수집<br>
+          · AI 총평 + HOW 가이드 + 학생별/학급별 SEL 개입 필요도 표시<br>
+          · 검사 재실시로 SEL 개입 전/후 효과 추적
+        </div>
+        <div style="margin-top:6px;font-size:14px;color:var(--black);font-weight:600;">⚠️ 기존 검사의 SEL 관점 재해석을 위한 매핑 기준 설계가 선행</div>
+      </div>
+
+      <!-- Layer 2 -->
+      <div style="padding:14px;background:var(--green-bg);border:1px solid rgba(5,150,105,0.12);border-radius:12px;">
+        <div style="font-size:14px;font-weight:800;color:var(--green);margin-bottom:6px;">Layer 2 — 콘텐츠 자료실 (SEL 전체 영역 확장)</div>
+        <div style="font-size:13px;color:var(--text-2);line-height:1.65;">
+          · 에듀넷 144종 + 어울림 + 비바샘 콘텐츠를 SEL 4대 역량 태그로 분류<br>
+          · 17차시 운영 가이드 + 학급 특성별 추천 커리큘럼<br>
+          · [공동체]·[관계 일부] 등 검사 미측정 영역을 활동 자료로 보완<br>
+          · 교사 커뮤니티 — SEL 수업 사례 공유·축적
+        </div>
+        <div style="margin-top:6px;font-size:14px;color:var(--black);font-weight:600;">⚠️ 콘텐츠 수급(외부+자체 제작)과 진단 연동 큐레이션 설계 필요</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="a d3" style="margin-top:10px;padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;text-align:center;">
+    <div style="font-size:16px;font-weight:700;color:var(--text);line-height:1.6;">핵심 메시지: 학습심리정서검사가 SEL을 직접 진단하는 것이 아니라,<br><strong style="color:var(--accent);">"학생의 학습심리 데이터로 SEL 교육을 효과적으로 운영하도록 돕는 인프라"</strong></div>
+  </div>
+</div>
+
+<!-- S12: 로드맵 -->
+<div class="slide" data-i="13" style="justify-content:flex-start;padding-top:36px;">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 5 추진 전략 › </span>12 로드맵</div>
+  <h2 class="a d1" style="font-size:clamp(22px,2.5vw,32px);margin-bottom:8px;">개발 추진 <em>로드맵</em></h2>
+  <div class="wbs a d2" style="flex-shrink:0;">
+    <!-- Header row -->
+    <div class="wbs-th label-col">영역</div>
+    <div class="wbs-th cat-col">구분</div>
+    <div class="wbs-th">MVP (~3월)</div>
+    <div class="wbs-th">4 ~ 5월</div>
+    <div class="wbs-th">6 ~ 7월</div>
+    <div class="wbs-th">8월</div>
+    <div class="wbs-th">9월~</div>
+
+    <!-- ═══ 성공 기준 요약 바 ═══ -->
+    <div class="goal-label">🎯 성공 기준</div>
+    <div class="goal-cell">
+      <div class="goal-bar">
+        <span class="goal-quote">"PDF보다 낫다"</span>
+        <span class="goal-desc">기존 PDF 대비 확실히 나은 경험</span>
+      </div>
+    </div>
+    <div class="goal-cell">
+      <div class="goal-bar">
+        <span class="goal-quote">"매일 들어올 이유"</span>
+        <span class="goal-desc">검사 시즌 외 자료실·상담으로 재방문</span>
+      </div>
+    </div>
+    <div class="goal-cell">
+      <div class="goal-bar">
+        <span class="goal-quote">"SEL 수업, 여기서 끝"</span>
+        <span class="goal-desc">17차시 준비를 원스톱으로</span>
+      </div>
+    </div>
+    <div class="goal-cell">
+      <div class="goal-bar">
+        <span class="goal-quote">"교장이 보고 싶은 데이터"</span>
+        <span class="goal-desc">학교·교육청 의사결정자 설득</span>
+      </div>
+    </div>
+    <div class="goal-cell">
+      <div class="goal-bar" style="background:var(--red);">
+        <span class="goal-quote">"학교가 돈 내고 쓴다"</span>
+        <span class="goal-desc">파일럿→유료 전환 시작</span>
+      </div>
+    </div>
+
+    <!-- ═══ 검사도구 · 기능 ═══ -->
+    <div class="area-label" style="grid-row:span 10;border-left:3px solid var(--accent);">
+      <span>🔬</span> 검사도구<br>고도화
+    </div>
+    <div class="cat-label" style="grid-row:span 7;">기능</div>
+
+    <div class="task-cell"><div class="wbs-bar feat">검사 생성/배포</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">PDF 업로드→동일 분석</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"><div class="wbs-bar feat">결과 대시보드</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">학생용 대시보드</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar feat">관리자 대시보드 (교장·장학사)</div></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"><div class="wbs-bar feat">상담 일정 관리</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">상담 기록 템플릿+음성</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">상담 대시보드 (키워드/추이)</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"><div class="wbs-bar feat">AI 어시스턴트 v1</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar feat">AI 엔진 고도화 (SEL 맥락)</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"><div class="wbs-bar feat">HOW 가이드</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar feat">전/후 변화 비교 (시계열)</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">SEL 효과 리포트</div></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar feat">자료실 · 커뮤니티</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar feat">교육청 보고 리포트</div></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar feat">사용자 테스트 · FGI 시작</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">피드백 반영 (계속)</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">안정화</div></div>
+    <div class="task-cell"></div>
+
+    <div class="cat-label" style="grid-row:span 3;">검사<br>고도화</div>
+
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar ai">지식그래프 DB 추가</div></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar ai">유형 분석 로직 재설계</div></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+
+    <!-- ═══ SEL 확장 ═══ -->
+    <div class="sep"></div>
+
+    <div class="area-label" style="grid-row:span 4;border-left:3px solid var(--green);">
+      <span>🧠</span> SEL 확장
+    </div>
+    <div class="cat-label" style="grid-row:span 4;">콘텐츠</div>
+
+    <div class="task-cell"><div class="wbs-bar content">비바샘 콘텐츠 연계</div></div>
+    <div class="task-cell"><div class="wbs-bar content">비바샘 연계 확대</div></div>
+    <div class="task-cell"><div class="wbs-bar content">17차시 운영 가이드</div></div>
+    <div class="task-cell"></div><div class="task-cell"></div>
+
+    <div class="task-cell"><div class="wbs-bar sel">SEL 태그 체계 설계</div></div>
+    <div class="task-cell"><div class="wbs-bar content">자체 제작 + 교사단 협업</div></div>
+    <div class="task-cell"><div class="wbs-bar content">자체 제작 + 교사단 협업</div></div>
+    <div class="task-cell"></div><div class="task-cell"></div>
+
+    <div class="task-cell"><div class="wbs-bar content">추천 활동</div></div>
+    <div class="task-cell"><div class="wbs-bar content">외부 콘텐츠 수급 (에듀넷 등)</div></div>
+    <div class="task-cell"><div class="wbs-bar content">외부 콘텐츠 수급</div></div>
+    <div class="task-cell"></div><div class="task-cell"></div>
+
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+
+    <!-- ═══ 기타 ═══ -->
+    <div class="sep"></div>
+
+    <div class="area-label" style="grid-row:span 4;border-left:3px solid var(--text-3);">
+      <span>📋</span> 기타
+    </div>
+    <div class="cat-label" style="grid-row:span 4;">브랜드<br>마케팅</div>
+
+    <div class="task-cell"><div class="wbs-bar etc">교사단 모집 (테스트·콘텐츠)</div></div>
+    <div class="task-cell"><div class="wbs-bar etc">네이밍 확정</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar etc">파일럿 학교 모집</div></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar etc">로고 · 브랜딩 디자인</div></div>
+    <div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar etc">프로모션</div></div>
+    <div class="task-cell"></div>
+
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+
+    <!-- ═══ 런칭 ═══ -->
+    <div class="sep"></div>
+
+    <div class="area-label" style="grid-row:span 2;border-left:3px solid var(--red);">
+      <span>🚀</span> 런칭
+    </div>
+    <div class="cat-label" style="grid-row:span 2;">GO</div>
+
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar launch">정식 런칭 · SaaS 영업</div></div>
+
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"><div class="wbs-bar launch">커뮤니티 생태계 확장</div></div>
+  </div>
+
+  <div class="wbs-legend a d3">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--accent-light);border:1px solid var(--accent);"></div> 기능</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green-light);border:1px solid var(--green);"></div> SEL/콘텐츠</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--violet-light);border:1px solid var(--violet);"></div> 연구소</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--surface);border:1px solid var(--border-2,#cbd5e1);"></div> 기타</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red-light);border:1px solid var(--red);"></div> 런칭</div>
+  </div>
+</div>
+
+<!-- S13: BM (NEW) -->
+<div class="slide" data-i="14" style="justify-content:flex-start;">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 5 추진 전략 › </span>13 비즈니스 모델</div>
+  <h2 class="a d1">3-채널 <em>수익 모델</em></h2>
+  <p class="sub a d2">학교 · 학원 · 교사 개인 — 채널별 과금 구조</p>
+</div>
+
+<!-- S14: 기대효과 -->
+<div class="slide" data-i="15">
+  <div class="sec a"><span style="color:var(--text-3);font-size:11px;">Part 5 추진 전략 › </span>14 기대 효과</div>
+  <h2 class="a d1">서비스 도입 <em>기대효과</em></h2>
+  <div class="a d2" style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div style="padding:22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;">
+      <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:12px;">🎯 교사</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:1.8;">
+        · 검사 해석 시간 대폭 감소 + 유형별 맞춤 지도 전략 즉시 확보<br>
+        · SEL 17차시 수업 준비 부담 경감 (자료실 SEL 콘텐츠)<br>
+        · 상담 기록 축적 → 추이/패턴 분석 가능<br>
+        · 교사 간 사례 공유로 지도 역량 향상
+      </div>
+    </div>
+    <div style="padding:22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;">
+      <div style="font-size:15px;font-weight:700;color:var(--green);margin-bottom:12px;">🏫 학교</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:1.8;">
+        · 학생 심리 + SEL 현황 학교 단위 가시화<br>
+        · 위험군 학생 조기 발견 + 교육청 보고용 데이터 자동 생성<br>
+        · SEL 의무화 대응 인프라 확보
+      </div>
+    </div>
+    <div style="padding:22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;">
+      <div style="font-size:15px;font-weight:700;color:var(--amber);margin-bottom:12px;">📚 학생</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:1.8;">
+        · "나의 문제"가 아닌 "조절 가능한 심리 요인"으로 인식 전환<br>
+        · 데이터 기반 맞춤 SEL 활동으로 사회정서역량 향상<br>
+        · 자존감 하락 방지
+      </div>
+    </div>
+    <div style="padding:22px;background:var(--surface);border:1px solid var(--border);border-radius:16px;">
+      <div style="font-size:15px;font-weight:700;color:var(--violet);margin-bottom:12px;">🏢 회사</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:1.8;">
+        · 비바샘/AIDT 종속 탈피 → 독립 서비스 확보<br>
+        · 검사 도구 → 서비스로 비즈니스 모델 전환<br>
+        · SEL 정책과 연동되어 학교 예산 설득력 강화<br>
+        · 교사 커뮤니티 + 자료실로 지속 방문 생태계 구축
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S15: 마무리 -->
+<div class="slide" data-i="16">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;max-width:720px;margin:0 auto;">
+    <div class="sec a">Summary</div>
+    <h2 class="a d1" style="text-align:center;">학습심리 데이터로<br><em>SEL 교육의 실행</em>까지 설계하다</h2>
+    <div class="a d2" style="margin-top:24px;display:flex;flex-direction:column;gap:10px;width:100%;">
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <span style="font-size:22px;">🔬</span>
+        <div style="text-align:left;"><div style="font-size:16px;font-weight:700;">검사 결과를 이해하게 만든다</div><div style="font-size:13px;color:var(--text-3);">AI 해석 · 대시보드 · HOW 가이드</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <span style="font-size:22px;">📚</span>
+        <div style="text-align:left;"><div style="font-size:16px;font-weight:700;">SEL 수업까지 자료실에서 지원한다</div><div style="font-size:13px;color:var(--text-3);">SEL 태그 분류 · 차시 가이드 · 에듀넷/비바샘 연계 · 사례 공유</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;">
+        <span style="font-size:22px;">📈</span>
+        <div style="text-align:left;"><div style="font-size:16px;font-weight:700;">개입의 효과를 데이터로 보여준다</div><div style="font-size:13px;color:var(--text-3);">변화 추적 · SEL 효과 가시화 · 학교 대시보드</div></div>
+      </div>
+    </div>
+    <div class="a d3" style="margin-top:20px;padding:14px 20px;background:var(--accent-bg);border:1px solid rgba(37,99,235,0.1);border-radius:14px;">
+      <p style="font-size:16px;font-weight:600;color:var(--accent);line-height:1.6;">학습심리·사회정서 데이터 기반으로<br>교사의 학생 이해와 교육적 개입을 지원하는 통합 플랫폼</p>
+    </div>
+  </div>
+</div>
+
+<!-- S16: 감사합니다 -->
+<div class="slide" data-i="17">
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;">
+    <h2 style="font-size:42px;font-weight:900;letter-spacing:-1px;" class="a d1">감사합니다</h2>
+    <p style="font-size:14px;color:var(--text-3);margin-top:16px;line-height:1.8;" class="a d2">학습심리·사회정서 교사 지원 플랫폼<br>에듀테크전략 CG · 에듀테크플랫폼기획 Core</p>
+  </div>
+</div>
+
+</div>
+
+<div class="nav">
+  <button class="nbtn" id="prevBtn">← 이전</button>
+  <div style="display:flex;align-items:center;gap:14px;"><div class="dots" id="dots"></div><span class="pc" id="pc"></span></div>
+  <button class="nbtn" id="nextBtn">다음 →</button>
+</div>
+
+<script>
+let cur=0;const slides=document.querySelectorAll('.slide');const total=slides.length;
+function init(){const dc=document.getElementById('dots');for(let i=0;i<total;i++){const d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.addEventListener('click',()=>goTo(i));dc.appendChild(d);}document.getElementById('prevBtn').addEventListener('click',()=>nav(-1));document.getElementById('nextBtn').addEventListener('click',()=>nav(1));ui();}
+function nav(dir){const n=cur+dir;if(n<0||n>=total)return;goTo(n);}
+function goTo(idx){if(idx===cur)return;const old=slides[cur],nw=slides[idx];old.classList.remove('active');old.style.opacity='0';old.style.transform='translateY(-10px)';setTimeout(()=>{old.style.transform='';old.style.opacity='';},500);nw.style.transform='translateY(16px)';nw.style.opacity='0';requestAnimationFrame(()=>{requestAnimationFrame(()=>{nw.classList.add('active');nw.style.transform='';nw.style.opacity='';nw.querySelectorAll('.a').forEach(el=>{el.style.animation='none';el.offsetHeight;el.style.animation='';});});});cur=idx;ui();}
+function ui(){document.querySelectorAll('.dot').forEach((d,i)=>{d.className='dot'+(i===cur?' active':'');});document.getElementById('pc').textContent=(cur+1)+'/'+total;document.getElementById('prevBtn').disabled=cur===0;document.getElementById('nextBtn').disabled=cur===total-1;document.getElementById('pbar').style.width=((cur/(total-1))*100)+'%';}
+document.addEventListener('keydown',e=>{if(document.querySelector('.modal-overlay.open'))return;if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){e.preventDefault();nav(1);}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();nav(-1);}});
+let tx=0;document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;});document.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>50)nav(d>0?1:-1);});
+init();
+// SEL Layer toggle
+function toggleSelLayer(target) {
+  const btns = document.querySelectorAll('.sel-layer-btn');
+  const layers = document.querySelectorAll('.sel-layer');
+  
+  btns.forEach(b => {
+    b.classList.remove('active');
+    if (b.dataset.target === target) b.classList.add('active');
+  });
+  
+  btns.forEach(b => {
+    if (b.classList.contains('active')) {
+      if (b.dataset.target === 'all') {
+        b.style.background = 'var(--text)'; b.style.color = '#fff';
+      } else if (b.dataset.target === '1') {
+        b.style.background = 'var(--accent)'; b.style.color = '#fff';
+      } else {
+        b.style.background = 'var(--amber)'; b.style.color = '#fff';
+      }
+    } else {
+      b.style.background = '#fff';
+      if (b.dataset.target === 'all') { b.style.color = 'var(--text)'; }
+      else if (b.dataset.target === '1') { b.style.color = 'var(--accent)'; }
+      else { b.style.color = 'var(--amber)'; }
+    }
+  });
+  
+  layers.forEach(l => {
+    const label = l.querySelector('.sel-layer-label');
+    const isL1 = l.dataset.layer === '1';
+    const borderColor = isL1 ? 'var(--accent)' : 'var(--amber)';
+    const bgColor = isL1 ? 'rgba(37,99,235,0.02)' : 'rgba(217,119,6,0.02)';
+    
+    if (target === 'all') {
+      l.style.opacity = '1';
+      l.style.filter = 'none';
+      l.style.transform = 'scale(1)';
+      l.style.borderColor = 'transparent';
+      l.style.background = 'transparent';
+      if (label) label.style.opacity = '0';
+    } else if (l.dataset.layer === target) {
+      l.style.opacity = '1';
+      l.style.filter = 'none';
+      l.style.transform = 'scale(1.01)';
+      l.style.borderColor = borderColor;
+      l.style.background = bgColor;
+      if (label) label.style.opacity = '1';
+    } else {
+      l.style.opacity = '0.2';
+      l.style.filter = 'grayscale(1)';
+      l.style.transform = 'scale(0.98)';
+      l.style.borderColor = 'transparent';
+      l.style.background = 'transparent';
+      if (label) label.style.opacity = '0';
+    }
+  });
+}
+</script>
+
+<!-- IMAGE GALLERY MODAL -->
+<div class="modal-overlay" id="galleryModal">
+  <div class="modal-header">
+    <span class="modal-title" id="galleryTitle"></span>
+    <button class="modal-close" onclick="closeGallery()">×</button>
+  </div>
+  <div class="modal-img-wrap">
+    <img id="galleryImg" src="" alt="">
+  </div>
+  <div class="modal-nav">
+    <button onclick="galleryNav(-1)" id="galleryPrev">← 이전</button>
+    <span class="modal-counter" id="galleryCounter"></span>
+    <button onclick="galleryNav(1)" id="galleryNext">다음 →</button>
+  </div>
+</div>
+
+<script>
+const GALLERIES = {
+  service: { title: '독립형 서비스', images: ["images/image_2.png", "images/image_3.png"] },
+  dashboard: { title: '인터랙티브 대시보드', images: ["images/image_4.png", "images/image_5.png", "images/image_6.png", "images/image_7.png"] },
+  howguide: { title: 'HOW 가이드', images: ["images/image_8.png", "images/image_9.png", "images/image_10.png", "images/image_11.png"] },
+  ai: { title: 'AI 어시스턴트', images: ["images/image_12.png", "images/image_13.png", "images/image_14.png"] }
+};
+
+let curGallery = null;
+let curIdx = 0;
+
+function openGallery(key) {
+  curGallery = GALLERIES[key];
+  curIdx = 0;
+  document.getElementById('galleryModal').classList.add('open');
+  updateGallery();
+}
+
+function closeGallery() {
+  document.getElementById('galleryModal').classList.remove('open');
+  curGallery = null;
+}
+
+function galleryNav(dir) {
+  if (!curGallery) return;
+  curIdx = Math.max(0, Math.min(curGallery.images.length - 1, curIdx + dir));
+  updateGallery();
+}
+
+function updateGallery() {
+  if (!curGallery) return;
+  document.getElementById('galleryTitle').textContent = curGallery.title;
+  document.getElementById('galleryImg').src = curGallery.images[curIdx];
+  document.getElementById('galleryCounter').textContent = (curIdx + 1) + ' / ' + curGallery.images.length;
+  document.getElementById('galleryPrev').disabled = curIdx === 0;
+  document.getElementById('galleryNext').disabled = curIdx === curGallery.images.length - 1;
+}
+
+document.getElementById('galleryModal').addEventListener('click', function(e) {
+  if (e.target === this) closeGallery();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (!curGallery) return;
+  if (e.key === 'Escape') closeGallery();
+  if (e.key === 'ArrowLeft') galleryNav(-1);
+  if (e.key === 'ArrowRight') galleryNav(1);
+});
+</script>
+</body>
+</html>

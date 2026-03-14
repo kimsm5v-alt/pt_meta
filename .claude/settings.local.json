@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vercel:*)",
+      "Bash(copy \"c:\\\\Users\\\\82107\\\\Downloads\\\\학심정 보고자료\\(서비스ver\\)_260309\\\\사업계획서_학습심리_SEL_슬라이드_v8_edit.html\" \"c:\\\\Users\\\\82107\\\\Downloads\\\\학심정 보고자료\\(서비스ver\\)_260309\\\\index.html\" /Y)",
+      "Bash(node -e \":*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
