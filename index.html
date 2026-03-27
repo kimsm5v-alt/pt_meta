@@ -102,7 +102,7 @@ tbody tr:hover{background:var(--surface);}
 .modal-counter{color:rgba(255,255,255,0.6);font-size:13px;font-family:'DM Mono',monospace;}
 
 /* ── WBS Roadmap (scoped) ── */
-.wbs{display:grid;grid-template-columns:160px 40px repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:12px;}
+.wbs{display:grid;grid-template-columns:160px 40px repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:12px;}
 .wbs .wbs-th{padding:10px 8px;font-family:'DM Mono',monospace;font-size:13px;font-weight:600;text-align:center;background:var(--text);color:#fff;border-right:1px solid rgba(255,255,255,0.1);letter-spacing:0.5px;}
 .wbs .wbs-th:last-child{border-right:none;}
 .wbs .wbs-th.label-col{text-align:left;padding-left:14px;font-family:var(--sans);font-weight:700;font-size:14px;}
@@ -812,10 +812,9 @@ tbody tr:hover{background:var(--surface);}
     <!-- Header row -->
     <div class="wbs-th label-col">영역</div>
     <div class="wbs-th cat-col">구분</div>
-    <div class="wbs-th">MVP (~3월)</div>
-    <div class="wbs-th">4 ~ 5월</div>
-    <div class="wbs-th">6 ~ 7월</div>
-    <div class="wbs-th">8월</div>
+    <div class="wbs-th">MVP (~4월)</div>
+    <div class="wbs-th">5 ~ 6월</div>
+    <div class="wbs-th">7 ~ 8월</div>
     <div class="wbs-th">9월~</div>
 
     <!-- ═══ 성공 기준 요약 바 ═══ -->
@@ -834,14 +833,8 @@ tbody tr:hover{background:var(--surface);}
     </div>
     <div class="goal-cell">
       <div class="goal-bar">
-        <span class="goal-quote">"개입 연계 기능 확장"</span>
-        <span class="goal-desc">17차시 준비를 원스톱으로</span>
-      </div>
-    </div>
-    <div class="goal-cell">
-      <div class="goal-bar">
-        <span class="goal-quote">"관리자 단위 활용 확장"</span>
-        <span class="goal-desc">학교·교육청 의사결정자 설득</span>
+        <span class="goal-quote">"기능 및 관리자 단위 활용 확장"</span>
+        <span class="goal-desc">기능 고도화 및 의사결정자 설득</span>
       </div>
     </div>
     <div class="goal-cell">
@@ -861,11 +854,9 @@ tbody tr:hover{background:var(--surface);}
     <div class="task-cell"><div class="wbs-bar feat">PDF 업로드→동일 분석</div></div>
     <div class="task-cell"></div>
     <div class="task-cell"></div>
-    <div class="task-cell"></div>
 
     <div class="task-cell"><div class="wbs-bar feat">결과 대시보드</div></div>
     <div class="task-cell"><div class="wbs-bar feat">학생용 대시보드</div></div>
-    <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar feat">관리자 대시보드 (교장·장학사)</div></div>
     <div class="task-cell"></div>
 
@@ -873,43 +864,38 @@ tbody tr:hover{background:var(--surface);}
     <div class="task-cell"><div class="wbs-bar feat">상담 기록 템플릿+음성</div></div>
     <div class="task-cell"><div class="wbs-bar feat">상담 대시보드 (키워드/추이)</div></div>
     <div class="task-cell"></div>
-    <div class="task-cell"></div>
 
     <div class="task-cell"><div class="wbs-bar feat">AI 어시스턴트 v1</div></div>
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar feat">AI 엔진 고도화 (SEL 맥락)</div></div>
     <div class="task-cell"></div>
-    <div class="task-cell"></div>
 
     <div class="task-cell"><div class="wbs-bar feat">HOW 가이드</div></div>
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar feat">전/후 변화 비교 (시계열)</div></div>
-    <div class="task-cell"><div class="wbs-bar feat">SEL 효과 리포트</div></div>
     <div class="task-cell"></div>
 
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar feat">자료실 · 커뮤니티</div></div>
-    <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar feat">교육청 보고 리포트</div></div>
     <div class="task-cell"></div>
 
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar feat">사용자 테스트 · FGI 시작</div></div>
-    <div class="task-cell"><div class="wbs-bar feat">피드백 반영 (계속)</div></div>
-    <div class="task-cell"><div class="wbs-bar feat">안정화</div></div>
+    <div class="task-cell"><div class="wbs-bar feat">피드백 반영 및 안정화</div></div>
     <div class="task-cell"></div>
 
     <div class="cat-label" style="grid-row:span 3;">검사<br>고도화</div>
 
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar ai">지식그래프 DB 추가</div></div>
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div>
 
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar ai">유형 분석 로직 재설계</div></div>
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div>
 
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
 
     <!-- ═══ SEL 확장 ═══ -->
     <div class="sep"></div>
@@ -922,19 +908,19 @@ tbody tr:hover{background:var(--surface);}
     <div class="task-cell"><div class="wbs-bar content">비바샘 콘텐츠 연계</div></div>
     <div class="task-cell"><div class="wbs-bar content">비바샘 연계 확대</div></div>
     <div class="task-cell"><div class="wbs-bar content">17차시 운영 가이드</div></div>
-    <div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div>
 
     <div class="task-cell"><div class="wbs-bar sel">SEL 태그 체계 설계</div></div>
     <div class="task-cell"><div class="wbs-bar content">자체 제작 + 교사단 협업</div></div>
     <div class="task-cell"><div class="wbs-bar content">자체 제작 + 교사단 협업</div></div>
-    <div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div>
 
     <div class="task-cell"><div class="wbs-bar content">추천 활동</div></div>
     <div class="task-cell"><div class="wbs-bar content">외부 콘텐츠 수급 (에듀넷 등)</div></div>
     <div class="task-cell"><div class="wbs-bar content">외부 콘텐츠 수급</div></div>
-    <div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div>
 
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
 
     <!-- ═══ 기타 ═══ -->
     <div class="sep"></div>
@@ -946,17 +932,15 @@ tbody tr:hover{background:var(--surface);}
 
     <div class="task-cell"><div class="wbs-bar etc">교사단 모집 (테스트·콘텐츠)</div></div>
     <div class="task-cell"><div class="wbs-bar etc">네이밍 확정</div></div>
-    <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar etc">파일럿 학교 모집</div></div>
     <div class="task-cell"></div>
 
     <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar etc">로고 · 브랜딩 디자인</div></div>
-    <div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar etc">프로모션</div></div>
     <div class="task-cell"></div>
 
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
 
     <!-- ═══ 런칭 ═══ -->
     <div class="sep"></div>
@@ -966,10 +950,10 @@ tbody tr:hover{background:var(--surface);}
     </div>
     <div class="cat-label" style="grid-row:span 2;">GO</div>
 
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar launch">정식 런칭 · SaaS 영업</div></div>
 
-    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
+    <div class="task-cell"></div><div class="task-cell"></div><div class="task-cell"></div>
     <div class="task-cell"><div class="wbs-bar launch">커뮤니티 생태계 확장</div></div>
   </div>
 
